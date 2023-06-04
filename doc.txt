@@ -1,0 +1,30 @@
+# how gameplay is going to work.
+
+Limited Time to Heal one's Poisoning.
+
+Stage 1: Guage via symptoms which recipe to use.
+Symptoms: 
+
+    EASY 
+    Chills - Screen goes blue for a moment
+    Cough - Screen jitters for a moment
+    
+    MEDIUM
+    Nausea - Screen moves around for a moment
+    Fever - Check using thermometer
+    Hallucinations - See things on screen
+
+    HARD
+    Blindness - Screen goes black for a moment
+    Dizzyness - Mouse inversion for a moment
+
+Spit Sample:
+    
+    Tests yield some results
+
+Stage 2: Make recipe
+
+If you are reading this, it likely means you have stumbled upon my laboratory and are likely poisoned. 
+The Remedy will involve two major steps. 
+Diagnosis - See AFFLICTIONS
+Medication - See DRAUGHTS
