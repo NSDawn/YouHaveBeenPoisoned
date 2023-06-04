@@ -16,6 +16,7 @@ const FONT_LIST = [
     "NotoSans",
     "NotoSansTamil",
 ];
+// goober
 
 const SFX_LIST = [
     "coughC.mp3",
