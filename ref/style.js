@@ -8,7 +8,7 @@ const COLORS = {
     "red-outline": "#732930",
     "statue-gray": "#656d71",
     "golden": "#f5d41d",
-}
+};
 
 const FONT_LIST = [
     "MPLUS",
@@ -16,7 +16,6 @@ const FONT_LIST = [
     "NotoSans",
     "NotoSansTamil",
 ];
-// goober
 
 const SFX_LIST = [
     "coughC.mp3",

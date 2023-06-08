@@ -144,10 +144,10 @@ function setStatueSymbols() {
 function setSymptoms() {
     // some thing with seed
     _SYMPTOMS = {
-        'fever': false,
-        'chills': true,
-        'cough': true,
-        'hallucinations': false,
+        'fever': true,
+        'chills': false,
+        'cough': false,
+        'hallucinations': true,
         'dizziness': false,
     }
     for (key in _SYMPTOMS) {
@@ -179,7 +179,7 @@ function setRecipe() {
         ]
     }
     const TEMP = _SYMPTOMS.fever ? "fever" : _SYMPTOMS.chills ? "chills" : "neither"
-    POTION_RECIPE.push(SPICE_REF[TEMP][ITEMS["tarot" +[String(TAROT_DECK[0])]]["metadata"][0]])
+    POTION_RECIPE.push(SPICE_REF[TEMP][ITEMS["tarot" +[String(TAROT_DECK[1])]]["metadata"][0]])
 
     const READ_SYMBOL = STATUE_SYMBOLS[STATUE_SYMBOL_SEQ[STATUE_SYMBOL_SEQ_LEN -1]][0]
     const BUG_REF = { 

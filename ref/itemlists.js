@@ -144,7 +144,7 @@ const ITEMS = {
     "vialstannic": new Item("vialstannic", "Vial of Stannic", "item_vialstannic"),
     "vialstannous": new Item("vialstannous", "Vial of Stannous", "item_vialstannous"),
     "vialplumbic": new Item("vialplumbic", "Vial of Plumbic", "item_vialplumbic"),
-    "vialplumbous": new Item("vialplumbic", "Vial of Plumbic", "item_vialplumbous"),
+    "vialplumbous": new Item("vialplumbous", "Vial of Plumbic", "item_vialplumbous"),
     "vialargentous": new Item("vialargentous", "Vial of Argentous", "item_vialargentous"),
     "vialaurous": new Item("vialaurous", "Vial of Aurous", "item_vialaurous"),
 
@@ -258,6 +258,10 @@ const RECIPES = {
     },
     "MOUTH" : {
         "thermometer/": "_thermometer",
+        "sage/": "",
+        "peppermint/": "",
+        "lemonbalm/": "",
+        "vialaurous/": "vial",
     }
 };
 

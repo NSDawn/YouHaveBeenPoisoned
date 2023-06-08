@@ -35,14 +35,14 @@ var cursor_pos = new v2(0, 0);
 var currScreen = 0;
 const SCREENS = [-2, -1, 0, 1];
 var isScreenShifting = 0; // 1  shifting right, -1, shifting left
-const screenShiftSpeed = 8; //must be %256 =0 
+const screenShiftSpeed = 8; // must be %256 =0 
 const SWITCHSCREEN_BUTTON_LEFT = new SwitchScreenButton(-1, new v2(94, 98));
 const SWITCHSCREEN_BUTTON_RIGHT = new SwitchScreenButton(1, new v2(146, 98));
 
 var time = 0;
 var formatted_time = "00:00";
 
-var SEED = "05935353"; // "01373733";
+var SEED = "09593551"; // "01373733";
 var PHASE = "0";
 
 var _SYMPTOMS = {
@@ -98,7 +98,7 @@ class sceneGame {
         // mouth slot
         MOUTH_SLOT.process = true; 
         MOUTH_SLOT.loadspeed = 16;
-        MOUTH_SLOT.whitelist = ["thermometer", "lemon_balm", "sage", "peppermint", "vialtonic", "vialauric"];
+        MOUTH_SLOT.whitelist = ["thermometer", "lemon_balm", "sage", "peppermint", "vialtonic", "vialaurous"];
 
         // vial slots 
         for (let i = 0; i < 3; i++) {
@@ -113,7 +113,7 @@ class sceneGame {
         }
         VIAL_SLOTS[0].item = ITEMS["vial"];
         VIAL_SLOTS[1].item = ITEMS["vial"];
-        VIAL_SLOTS[2].item = ITEMS["vialwater"];
+        VIAL_SLOTS[2].item = ITEMS["vial"];
         
         // adding all vials to whitelists
         for (let key in ITEMS) {
@@ -260,14 +260,31 @@ class sceneGame {
         } else if (MOUSE_SLOT.item.name.includes("thermometer")) {
             MOUSE_SLOT.item = ITEMS["thermometer"];
         }
-        if (MOUTH_SLOT.item.name == "_thermometer") {
-            if (SYMPTOMS.fever) {
-                TEMPERATURE = 2;
-            } else if (SYMPTOMS.chills) {
-                TEMPERATURE = 0;
-            } else {TEMPERATURE = 1}
+        switch (MOUTH_SLOT.item.name) {
+            case null: 
+                break;
             
-            MOUTH_SLOT.item = ITEMS["thermometer" + String(TEMPERATURE)]
+            case "_thermometer" : 
+                if (SYMPTOMS.fever) {
+                    TEMPERATURE = 2;
+                } else if (SYMPTOMS.chills) {
+                    TEMPERATURE = 0;
+                } else {TEMPERATURE = 1}
+                MOUTH_SLOT.item = ITEMS["thermometer" + String(TEMPERATURE)]
+                break;
+            
+            case "peppermint":
+            case "lemonbalm":
+                SYMPTOMS.cough = false;
+                break;
+            
+            case "sage": 
+                SYMPTOMS.hallucinations = false;
+                break;
+            
+            case "aurous": 
+                SYMPTOMS.dizziness = false;
+            
         }
 
         // vial slots
